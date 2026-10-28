@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
-/// Color palette of the design. Changing these values changes the whole app.
+/// Color palette of the "Sabores de Canarias" design.
+/// Changing these values changes the look of the whole app.
 class AppColors {
-  static const Color primary = Color(0xFF1565C0);
-  static const Color secondary = Color(0xFF4FC3F7);
-  static const Color success = Color(0xFF4CAF50);
-  static const Color error = Color(0xFFF44336);
-  static const Color warning = Color(0xFFFFB300);
-  static const Color info = Color(0xFF2196F3);
-  static const Color background = Color(0xFFF5F7FA);
-  static const Color text = Color(0xFF212121);
-  static const Color disabled = Color(0xFFBDBDBD);
+  static const Color primary = Color(0xFFE85D3A); // Mojo picón red
+  static const Color secondary = Color(0xFFF2B33D); // Banana / corn yellow
+  static const Color success = Color(0xFF4C9A2A); // Mojo verde green
+  static const Color error = Color(0xFFC62828); // Strong red
+  static const Color warning = Color(0xFFF57C00); // Orange
+  static const Color info = Color(0xFF1E88E5); // Atlantic blue
+  static const Color background = Color(0xFFFFF8F0); // Cream (gofio color)
+  static const Color text = Color(0xFF3E2723); // Dark brown (volcanic soil)
+  static const Color disabled = Color(0xFF9E9E9E); // Grey
 
   static const Color textOnPrimary = Colors.white;
-  static const Color lightBlue = Color(0xFFE3F2FD); // selected drawer item
-  static const Color greyText = Color(0xFF9E9E9E);
 }

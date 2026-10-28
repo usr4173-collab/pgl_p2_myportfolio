@@ -7,8 +7,7 @@ import '../widgets/hobby_list.dart';
 import '../widgets/presentation.dart';
 import '../widgets/repository.dart';
 
-/// Portfolio screen. The old buttons to change section
-/// are replaced by a tab bar (DefaultTabController + TabBar + TabBarView).
+
 class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({super.key});
 
@@ -20,7 +19,10 @@ class PortfolioScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text(AppStrings.portfolioTitle),
           bottom: const CustomTabBar(
-            tabs: [AppStrings.hobbiesTab, AppStrings.repositoryTab],
+            tabs: [
+              TabItem(icon: Icons.favorite, text: AppStrings.hobbiesTab),
+              TabItem(icon: Icons.qr_code, text: AppStrings.repositoryTab),
+            ],
           ),
         ),
         drawer: const DrawerMenu(),

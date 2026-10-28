@@ -10,27 +10,21 @@ class Presentation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.fromLTRB(
-        AppSizes.paddingLarge,
-        AppSizes.paddingLarge,
-        AppSizes.paddingLarge,
-        0,
-      ),
-      child: const Padding(
-        padding: EdgeInsets.all(AppSizes.paddingLarge),
-        child: Row(
-          children: [
-            _ProfilePhoto(),
-            SizedBox(width: AppSizes.spacing),
-            Expanded(
-              child: Text(
-                AppStrings.introduction,
-                style: TextStyle(fontSize: AppSizes.textSize, color: AppColors.text),
-              ),
+    return Container(
+      width: double.infinity,
+      color: AppColors.secondary.withValues(alpha: 0.2),
+      padding: const EdgeInsets.all(AppSizes.paddingLarge),
+      child: const Row(
+        children: [
+          _ProfilePhoto(),
+          SizedBox(width: AppSizes.spacing),
+          Expanded(
+            child: Text(
+              AppStrings.introduction,
+              style: TextStyle(fontSize: AppSizes.textSize, color: AppColors.text),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
