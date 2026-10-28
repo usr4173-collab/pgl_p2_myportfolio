@@ -5,8 +5,7 @@ import '../constants/app_colors.dart';
 import '../constants/app_sizes.dart';
 import '../constants/app_strings.dart';
 
-/// "Repositorio" tab: 2 cards you can swipe (PageView) with dots below.
-/// Card 1: image + quote. Card 2: QR code with the link.
+
 class Repository extends StatefulWidget {
   const Repository({super.key});
 
