@@ -17,6 +17,7 @@ class AppSizes {
   static const double hobbyIcon = 26;
   static const double repositoryImageWidth = 200;
   static const double qrSize = 200;
+  static const double categoryImage = 56;
 
   // Form limits (int because they are numbers of characters)
   static const int maxNameLength = 30;
