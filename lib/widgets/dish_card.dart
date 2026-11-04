@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_sizes.dart';
+import '../constants/app_strings.dart';
 import '../models/dish.dart';
 
 /// Card that shows one dish: category image, name, category · island and description.
+/// The delete button does not delete anything by itself: it calls [onDelete]
+/// and the screen (which owns the list) decides what to do.
 class DishCard extends StatelessWidget {
   final Dish dish;
+  final VoidCallback onDelete;
 
-  const DishCard({super.key, required this.dish});
+  const DishCard({super.key, required this.dish, required this.onDelete});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +24,12 @@ class DishCard extends StatelessWidget {
         title: Text(dish.name, style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text('${dish.category.label} · ${dish.island}\n${dish.description}'),
         isThreeLine: true,
+        // Delete button on the right of each dish
+        trailing: IconButton(
+          icon: const Icon(Icons.delete, color: AppColors.error),
+          tooltip: AppStrings.delete,
+          onPressed: onDelete,
+        ),
       ),
     );
   }

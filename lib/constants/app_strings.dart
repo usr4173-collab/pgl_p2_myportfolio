@@ -28,6 +28,10 @@ class AppStrings {
   static const String cancel = 'Cancelar';
   static const String save = 'Guardar';
   static const String dishAdded = 'Plato añadido';
+  static const String delete = 'Borrar';
+  static const String deleteDishTitle = '¿Borrar plato?';
+  static const String deleteDishQuestion = 'Se eliminará';
+  static const String dishDeleted = 'Plato eliminado';
 
   // Portfolio
   static const String portfolioTitle = 'Portfolio';

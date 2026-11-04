@@ -47,6 +47,45 @@ class _DishesScreenState extends State<DishesScreen> {
     );
   }
 
+  /// DELETE: asks for confirmation and, if the user accepts, removes the dish.
+  Future<void> _deleteDish(Dish dish) async {
+    // The dialog returns true (Borrar) or false/null (Cancelar or tap outside)
+    final bool? confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        icon: const Icon(Icons.warning, color: AppColors.warning),
+        title: const Text(AppStrings.deleteDishTitle),
+        content: Text('${AppStrings.deleteDishQuestion} "${dish.name}".'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text(AppStrings.cancel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text(
+              AppStrings.delete,
+              style: TextStyle(color: AppColors.error),
+            ),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed != true) return;
+
+    // setState redraws the list without the deleted dish
+    setState(() => _dishes.remove(dish));
+
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text(AppStrings.dishDeleted),
+        backgroundColor: AppColors.error,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +110,13 @@ class _DishesScreenState extends State<DishesScreen> {
     return ListView.builder(
       padding: const EdgeInsets.only(top: 8, bottom: 80),
       itemCount: _dishes.length,
-      itemBuilder: (context, index) => DishCard(dish: _dishes[index]),
+      itemBuilder: (context, index) {
+        final dish = _dishes[index];
+        return DishCard(
+          dish: dish,
+          onDelete: () => _deleteDish(dish),
+        );
+      },
     );
   }
 }
