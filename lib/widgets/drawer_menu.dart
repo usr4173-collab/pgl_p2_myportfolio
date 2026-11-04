@@ -49,8 +49,8 @@ class DrawerMenu extends StatelessWidget {
           _DrawerItem(
             icon: Icons.person,
             text: AppStrings.menuPortfolio,
-            route: AppRoutes.portfolio,
-            selected: currentPath == AppRoutes.portfolio,
+            route: AppRoutes.perfil,
+            selected: currentPath == AppRoutes.perfil,
           ),
         ],
       ),

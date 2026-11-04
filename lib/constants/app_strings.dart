@@ -12,7 +12,7 @@ class AppStrings {
 
   // Drawer
   static const String menuHome = 'Inicio';
-  static const String menuPortfolio = 'Portfolio';
+  static const String menuPortfolio = 'Perfil';
 
   // Portfolio
   static const String portfolioTitle = 'Portfolio';

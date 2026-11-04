@@ -6,7 +6,7 @@ import '../screens/welcome_screen.dart';
 /// Route paths. Using constants avoids typing the same text in several places.
 class AppRoutes {
   static const String welcome = '/';
-  static const String portfolio = '/portfolio';
+  static const String perfil = '/perfil';
 }
 
 /// App navigation with go_router.
@@ -19,7 +19,7 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const WelcomeScreen(),
     ),
     GoRoute(
-      path: AppRoutes.portfolio,
+      path: AppRoutes.perfil,
       builder: (context, state) => const PortfolioScreen(),
     ),
   ],

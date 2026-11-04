@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(AppStrings.startButton),
                 // go_router: go to the portfolio
-                onPressed: () => context.go(AppRoutes.portfolio),
+                onPressed: () => context.go(AppRoutes.perfil),
               ),
             ],
           ),
