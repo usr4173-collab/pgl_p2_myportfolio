@@ -12,7 +12,22 @@ class AppStrings {
 
   // Drawer
   static const String menuHome = 'Inicio';
-  static const String menuPortfolio = 'Perfil';
+  static const String menuPortfolio = 'Portfolio';
+  static const String menuDishes = 'Gestionar platos';
+
+  // Dishes (CRUD)
+  static const String dishesTitle = 'Gestionar platos';
+  static const String noDishes = 'No hay platos. Pulsa + para añadir uno.';
+  static const String addDish = 'Añadir plato';
+  static const String dishName = 'Nombre';
+  static const String dishIsland = 'Isla';
+  static const String dishCategory = 'Categoría';
+  static const String dishDescription = 'Descripción';
+  static const String shortDescriptionHint = 'Una frase breve';
+  static const String requiredField = 'Este campo es obligatorio';
+  static const String cancel = 'Cancelar';
+  static const String save = 'Guardar';
+  static const String dishAdded = 'Plato añadido';
 
   // Portfolio
   static const String portfolioTitle = 'Portfolio';
