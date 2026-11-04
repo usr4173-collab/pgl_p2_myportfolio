@@ -5,6 +5,7 @@ import '../constants/app_strings.dart';
 import '../data/dishes.dart';
 import '../models/dish.dart';
 import '../widgets/dish_card.dart';
+import '../widgets/dish_counter.dart';
 import '../widgets/dish_form_dialog.dart';
 import '../widgets/drawer_menu.dart';
 
@@ -89,7 +90,12 @@ class _DishesScreenState extends State<DishesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.dishesTitle)),
+      appBar: AppBar(
+        title: const Text(AppStrings.dishesTitle),
+        // Counter with the total number of dishes, at the top right.
+        // It is rebuilt every time setState is called (add / delete).
+        actions: [DishCounter(total: _dishes.length)],
+      ),
       drawer: const DrawerMenu(),
       // If there are no dishes we show a message; if there are, the list.
       body: _dishes.isEmpty ? const _EmptyMessage() : _buildList(),

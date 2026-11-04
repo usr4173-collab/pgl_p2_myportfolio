@@ -32,6 +32,7 @@ class AppStrings {
   static const String deleteDishTitle = '¿Borrar plato?';
   static const String deleteDishQuestion = 'Se eliminará';
   static const String dishDeleted = 'Plato eliminado';
+  static const String totalDishes = 'Total de platos';
 
   // Portfolio
   static const String portfolioTitle = 'Portfolio';
