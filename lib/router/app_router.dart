@@ -1,12 +1,14 @@
 import 'package:go_router/go_router.dart';
 
+import '../screens/dishes_screen.dart';
 import '../screens/portfolio_screen.dart';
 import '../screens/welcome_screen.dart';
 
 /// Route paths. Using constants avoids typing the same text in several places.
 class AppRoutes {
   static const String welcome = '/';
-  static const String perfil = '/perfil';
+  static const String portfolio = '/portfolio';
+  static const String dishes = '/dishes';
 }
 
 /// App navigation with go_router.
@@ -19,8 +21,12 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const WelcomeScreen(),
     ),
     GoRoute(
-      path: AppRoutes.perfil,
+      path: AppRoutes.portfolio,
       builder: (context, state) => const PortfolioScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.dishes,
+      builder: (context, state) => const DishesScreen(),
     ),
   ],
 );
