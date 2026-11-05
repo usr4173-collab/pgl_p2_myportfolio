@@ -24,7 +24,7 @@ flutter:
 
   assets:
     - assets/images/
-    -assets/images/categories/
+    - assets/images/categories/
 
   fonts:
     - family: Lobster
