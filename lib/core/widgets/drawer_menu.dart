@@ -58,6 +58,12 @@ class DrawerMenu extends StatelessWidget {
             route: AppRoutes.dishes,
             selected: currentPath == AppRoutes.dishes,
           ),
+          _DrawerItem(
+            icon: Icons.settings,
+            text: AppStrings.menuSettings,
+            route: AppRoutes.settings,
+            selected: currentPath == AppRoutes.settings,
+          ),
         ],
       ),
     );

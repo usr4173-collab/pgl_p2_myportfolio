@@ -14,6 +14,7 @@ class AppStrings {
   static const String menuHome = 'Inicio';
   static const String menuPortfolio = 'Portfolio';
   static const String menuDishes = 'Gestionar platos';
+  static const String menuSettings = 'Ajustes';
 
   // Dishes (CRUD)
   static const String dishesTitle = 'Gestionar platos';
@@ -33,6 +34,20 @@ class AppStrings {
   static const String deleteDishQuestion = 'Se eliminará';
   static const String dishDeleted = 'Plato eliminado';
   static const String totalDishes = 'Total de platos';
+
+  // Settings
+  static const String settingsTitle = 'Ajustes';
+  static const String favoriteIslandTitle = 'Tu isla favorita';
+  static const String favoriteDishTitle = 'Tu plato favorito';
+  static const String favoriteDishLabel = 'Plato favorito';
+  static const String favoriteDishHint = 'Ej.: Papas arrugadas con mojo';
+  static const String savedValueTitle = 'Guardado en memoria';
+  static const String nothingSaved = 'Nada guardado todavía';
+  static const String islandSaved = 'Isla favorita guardada';
+  static const String dishSaved = 'Plato favorito guardado';
+  static const String saveError = 'No se ha podido guardar';
+  static const String resetSettings = 'Borrar ajustes guardados';
+  static const String settingsReset = 'Ajustes borrados';
 
   // Portfolio
   static const String portfolioTitle = 'Portfolio';

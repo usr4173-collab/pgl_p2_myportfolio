@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
 import 'package:pgl_p2_myportfolio/core/router/app_router.dart';
+import 'package:pgl_p2_myportfolio/core/services/local_storage_service.dart';
 import 'package:pgl_p2_myportfolio/core/theme/app_theme.dart';
 
-void main() {
+Future<void> main() async {
+  // Needed before using plugins (shared_preferences) in main
+  WidgetsFlutterBinding.ensureInitialized();
+  // Loads the saved settings once, before the app starts
+  await LocalStorageService.getInstance().initialize();
   runApp(const MyPortfolioApp());
 }
 
