@@ -1,4 +1,4 @@
-import 'dish_category.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/models/dish_category.dart';
 
 /// Data model: a typical Canarian dish or product.
 class Dish {

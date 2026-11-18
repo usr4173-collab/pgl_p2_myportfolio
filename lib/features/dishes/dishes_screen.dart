@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_strings.dart';
-import '../data/dishes.dart';
-import '../models/dish.dart';
-import '../widgets/dish_card.dart';
-import '../widgets/dish_counter.dart';
-import '../widgets/dish_form_dialog.dart';
-import '../widgets/drawer_menu.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/data/dishes.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/models/dish.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/widgets/dish_card.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/widgets/dish_counter.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/widgets/dish_form_dialog.dart';
+import 'package:pgl_p2_myportfolio/core/widgets/drawer_menu.dart';
 
 /// CRUD screen: here the user will see, add, edit and delete dishes.
 /// It is a StatefulWidget because the list of dishes will change

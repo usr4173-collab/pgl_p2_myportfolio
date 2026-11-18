@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
 
 /// App theme: spreads the design colors across all widgets.
 class AppTheme {

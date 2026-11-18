@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
 
-import '../screens/dishes_screen.dart';
-import '../screens/portfolio_screen.dart';
-import '../screens/welcome_screen.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/dishes_screen.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/portfolio_screen.dart';
+import 'package:pgl_p2_myportfolio/features/welcome/welcome_screen.dart';
 
 /// Route paths. Using constants avoids typing the same text in several places.
 class AppRoutes {

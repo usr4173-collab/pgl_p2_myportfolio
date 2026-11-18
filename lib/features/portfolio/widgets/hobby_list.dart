@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_sizes.dart';
-import '../data/hobbies.dart';
-import 'hobby_item.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/data/hobbies.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/widgets/hobby_item.dart';
 
 /// "Mis hobbies" tab: one card for each hobby in the list.
 class HobbyList extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'constants/app_strings.dart';
-import 'router/app_router.dart';
-import 'theme/app_theme.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/core/router/app_router.dart';
+import 'package:pgl_p2_myportfolio/core/theme/app_theme.dart';
 
 void main() {
   runApp(const MyPortfolioApp());

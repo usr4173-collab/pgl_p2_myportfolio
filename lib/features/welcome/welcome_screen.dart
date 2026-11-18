@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_sizes.dart';
-import '../constants/app_strings.dart';
-import '../router/app_router.dart';
-import '../widgets/drawer_menu.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/core/router/app_router.dart';
+import 'package:pgl_p2_myportfolio/core/widgets/drawer_menu.dart';
 
 /// Welcome screen: background image + welcome message + "Empezar" button.
 class WelcomeScreen extends StatelessWidget {

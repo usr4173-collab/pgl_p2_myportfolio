@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_sizes.dart';
-import '../models/hobby.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/models/hobby.dart';
 
 /// Card for a single hobby: icon in a yellow circle + name.
 class HobbyItem extends StatelessWidget {

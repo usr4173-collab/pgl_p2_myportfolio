@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_sizes.dart';
-import '../constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
 
 /// "Más sobre mí" tab: image, name, quote and QR code with the link.
 class Repository extends StatelessWidget {

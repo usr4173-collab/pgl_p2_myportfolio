@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_sizes.dart';
-import '../constants/app_strings.dart';
-import '../models/dish.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/models/dish.dart';
 
 /// Card that shows one dish: category image, name, category · island and description.
 /// The delete button does not delete anything by itself: it calls [onDelete]

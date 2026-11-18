@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_sizes.dart';
-import '../constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
 
 /// Strip with the profile photo and the introduction text.
 class Presentation extends StatelessWidget {

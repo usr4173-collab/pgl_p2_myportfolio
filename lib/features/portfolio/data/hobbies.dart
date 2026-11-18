@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/hobby.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/models/hobby.dart';
 
 /// List of hobbies shown in the "Mis hobbies" tab.
 const List<Hobby> hobbies = [

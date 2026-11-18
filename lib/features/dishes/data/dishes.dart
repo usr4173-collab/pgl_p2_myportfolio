@@ -1,5 +1,5 @@
-import '../models/dish.dart';
-import '../models/dish_category.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/models/dish.dart';
+import 'package:pgl_p2_myportfolio/features/dishes/models/dish_category.dart';
 
 /// Options for the dropdowns of the form.
 const List<String> islands = [

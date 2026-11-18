@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_colors.dart';
-import '../constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_colors.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
 
 /// Counter that shows the total number of dishes of the list.
 /// It is a Badge (small yellow circle with the number) on top of an icon.

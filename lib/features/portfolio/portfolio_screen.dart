@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_strings.dart';
-import '../widgets/custom_tab_bar.dart';
-import '../widgets/drawer_menu.dart';
-import '../widgets/hobby_list.dart';
-import '../widgets/presentation.dart';
-import '../widgets/repository.dart';
+import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/widgets/custom_tab_bar.dart';
+import 'package:pgl_p2_myportfolio/core/widgets/drawer_menu.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/widgets/hobby_list.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/widgets/presentation.dart';
+import 'package:pgl_p2_myportfolio/features/portfolio/widgets/repository.dart';
 
 
 class PortfolioScreen extends StatelessWidget {
