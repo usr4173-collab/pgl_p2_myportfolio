@@ -6,7 +6,6 @@ import 'package:pgl_p2_myportfolio/core/constants/app_sizes.dart';
 import 'package:pgl_p2_myportfolio/core/constants/app_strings.dart';
 import 'package:pgl_p2_myportfolio/core/router/app_router.dart';
 import 'package:pgl_p2_myportfolio/core/services/auth_service.dart';
-import 'package:pgl_p2_myportfolio/core/widgets/drawer_menu.dart';
 import 'package:pgl_p2_myportfolio/core/widgets/response_dialog.dart';
 import 'package:pgl_p2_myportfolio/features/auth/widgets/auth_input_decoration.dart';
 
@@ -41,8 +40,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.registerTitle)),
-      drawer: const DrawerMenu(),
+      // No drawer: the user is not logged in yet
+      appBar: AppBar(
+        title: const Text(AppStrings.registerTitle),
+        automaticallyImplyLeading: false,
+      ),
       body: SingleChildScrollView(
         // Scroll so the keyboard never hides the inputs
         padding: const EdgeInsets.all(AppSizes.spacingLarge),
@@ -109,6 +111,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     )
                   : const Text(AppStrings.registerButton),
+            ),
+            const SizedBox(height: AppSizes.spacing),
+
+            // Without drawer, this is the way back to the login screen
+            TextButton(
+              style: TextButton.styleFrom(foregroundColor: AppColors.primary),
+              onPressed: () => context.go(AppRoutes.login),
+              child: const Text(AppStrings.goToLogin),
             ),
           ],
         ),
