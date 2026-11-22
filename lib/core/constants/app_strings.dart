@@ -21,6 +21,8 @@ class AppStrings {
   // Auth (register / login)
   static const String registerTitle = 'Crear cuenta';
   static const String loginTitle = 'Iniciar sesión';
+  static const String loginButton = 'Entrar';
+  static const String goToRegister = '¿No tienes cuenta? Regístrate';
   static const String fullName = 'Nombre completo';
   static const String email = 'Email';
   static const String password = 'Contraseña';
