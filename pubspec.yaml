@@ -1,5 +1,5 @@
 name: pgl_p2_myportfolio
-description: "PGL-P2-MyPortfolio: app de turismo de Canarias con portfolio."
+description: "PGL-P2-MyPortfolio: Sabores de Canarias, app de gastronomía canaria con portfolio."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   go_router: ^16.0.0
+  http: ^1.2.2
   qr_flutter: ^4.1.0
   shared_preferences: ^2.5.3
 
@@ -24,10 +25,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
+    - assets/images/welcome/
+    - assets/images/portfolio/
     - assets/images/categories/
-
-  fonts:
-    - family: Lobster
-      fonts:
-        - asset: assets/fonts/Lobster-Regular.ttf
