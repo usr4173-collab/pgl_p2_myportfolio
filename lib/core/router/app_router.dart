@@ -1,5 +1,7 @@
 import 'package:go_router/go_router.dart';
 
+import 'package:pgl_p2_myportfolio/features/auth/login_screen.dart';
+import 'package:pgl_p2_myportfolio/features/auth/register_screen.dart';
 import 'package:pgl_p2_myportfolio/features/dishes/dishes_screen.dart';
 import 'package:pgl_p2_myportfolio/features/portfolio/portfolio_screen.dart';
 import 'package:pgl_p2_myportfolio/features/settings/settings_screen.dart';
@@ -11,6 +13,8 @@ class AppRoutes {
   static const String portfolio = '/portfolio';
   static const String dishes = '/dishes';
   static const String settings = '/settings';
+  static const String register = '/register';
+  static const String login = '/login';
 }
 
 /// App navigation with go_router.
@@ -33,6 +37,14 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.settings,
       builder: (context, state) => const SettingsScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.register,
+      builder: (context, state) => const RegisterScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.login,
+      builder: (context, state) => const LoginScreen(),
     ),
   ],
 );

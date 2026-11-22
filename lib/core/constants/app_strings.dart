@@ -4,7 +4,7 @@ class AppStrings {
   static const String appTitle = 'Sabores de Canarias';
 
   // Welcome screen
-  static const String welcomeBackground = 'assets/images/fondo.jpg';
+  static const String welcomeBackground = 'assets/images/welcome/fondo.jpg';
   static const String welcomeTitle = '¡Bienvenido a\nSabores de Canarias!';
   static const String welcomeSubtitle =
       'Descubre los platos y productos típicos de las 8 islas.';
@@ -15,6 +15,21 @@ class AppStrings {
   static const String menuPortfolio = 'Portfolio';
   static const String menuDishes = 'Gestionar platos';
   static const String menuSettings = 'Ajustes';
+  static const String menuRegister = 'Registro';
+  static const String menuLogin = 'Iniciar sesión';
+
+  // Auth (register / login)
+  static const String registerTitle = 'Crear cuenta';
+  static const String loginTitle = 'Iniciar sesión';
+  static const String fullName = 'Nombre completo';
+  static const String email = 'Email';
+  static const String password = 'Contraseña';
+  static const String registerButton = 'Registrarse';
+  static const String successTitle = '¡Todo correcto!';
+  static const String errorTitle = 'Algo ha fallado';
+  static const String accept = 'Aceptar';
+  static const String connectionError =
+      'No se ha podido conectar con el servidor. Inténtalo de nuevo.';
 
   // Dishes (CRUD)
   static const String dishesTitle = 'Gestionar platos';
@@ -57,9 +72,9 @@ class AppStrings {
   static const String introduction =
       '¡Hola! Soy Ellie, tengo 14 años y vivo en un mundo postapocalíptico. '
       'Me encanta la música y tocar la guitarra, y también disfruto mucho de los videojuegos.';
-  static const String profilePhoto = 'assets/images/EllieTLOU1.png';
+  static const String profilePhoto = 'assets/images/portfolio/EllieTLOU1.png';
 
-  static const String repositoryImage = 'assets/images/Naughty_Dog_Logo.png';
+  static const String repositoryImage = 'assets/images/portfolio/Naughty_Dog_Logo.png';
   static const String repositoryName = 'Ellie Williams';
   static const String repositoryQuote =
       '"Si quieres sobrevivir en este mundo, necesitas ser fuerte y valiente. '
