@@ -82,6 +82,25 @@ class AuthService {
     throw AuthException(json['message'] as String);
   }
 
+  /// GET /users/check-token with the header "Authorization: Bearer <token>".
+  /// Returns true if the API says the token is valid (200 OK),
+  /// false if it is not valid (401 Unauthorized: expired or wrong).
+  /// Throws [AuthException] if the server can not be reached.
+  static Future<bool> checkToken(String token) async {
+    final http.Response response;
+    try {
+      response = await http
+          .get(
+            Uri.parse(ApiConstants.baseUrl + ApiConstants.checkToken),
+            headers: {'Authorization': 'Bearer $token'},
+          )
+          .timeout(ApiConstants.timeout);
+    } catch (_) {
+      throw const AuthException(AppStrings.connectionError);
+    }
+    return response.statusCode == 200;
+  }
+
   /// Common part of every POST: URL, JSON headers, body and timeout.
   static Future<http.Response> _post(
     String endpoint,

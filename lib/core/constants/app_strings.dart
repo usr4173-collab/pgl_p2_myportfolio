@@ -15,13 +15,16 @@ class AppStrings {
   static const String menuPortfolio = 'Portfolio';
   static const String menuDishes = 'Gestionar platos';
   static const String menuSettings = 'Ajustes';
-  static const String menuRegister = 'Registro';
-  static const String menuLogin = 'Iniciar sesión';
+  static const String menuLogout = 'Cerrar sesión';
 
   // Auth (register / login)
   static const String registerTitle = 'Crear cuenta';
   static const String loginTitle = 'Iniciar sesión';
   static const String loginButton = 'Entrar';
+  static const String checkingSession = 'Comprobando sesión...';
+  static const String tokenSaveError =
+      'No se ha podido guardar la sesión en el dispositivo.';
+  static const String goToLogin = '¿Ya tienes cuenta? Inicia sesión';
   static const String goToRegister = '¿No tienes cuenta? Regístrate';
   static const String fullName = 'Nombre completo';
   static const String email = 'Email';

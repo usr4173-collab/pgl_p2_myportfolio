@@ -20,7 +20,8 @@ class AppRoutes {
 /// App navigation with go_router.
 /// Each GoRoute links a path with the screen that is shown.
 final GoRouter appRouter = GoRouter(
-  initialLocation: AppRoutes.welcome,
+  // The app always starts on the login screen
+  initialLocation: AppRoutes.login,
   routes: [
     GoRoute(
       path: AppRoutes.welcome,
