@@ -9,6 +9,10 @@ class AppStrings {
   static const String welcomeSubtitle =
       'Descubre los platos y productos típicos de las 8 islas.';
   static const String startButton = 'Empezar';
+  static const String welcomeMessageButton = 'Ver mensaje de bienvenida';
+  static const String noSession = 'No hay ninguna sesión iniciada.';
+  static const String sessionExpired =
+      'Tu sesión ha caducado. Vuelve a iniciar sesión.';
 
   // Drawer
   static const String menuHome = 'Inicio';

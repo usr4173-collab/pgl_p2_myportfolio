@@ -6,6 +6,7 @@ class ApiConstants {
   static const String register = '/users/register';
   static const String login = '/users/login';
   static const String checkToken = '/users/check-token';
+  static const String welcome = '/users/welcome';
 
   // The server is on Render's free plan: when it is "asleep",
   // the first request can take up to ~1 minute to answer.

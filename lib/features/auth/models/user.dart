@@ -1,4 +1,4 @@
-/// User returned by the API on login: { "id", "fullName", "email" }.
+/// User returned by the API on login: { "id", "name", "email" }.
 class User {
   final int id;
   final String fullName;
@@ -10,7 +10,9 @@ class User {
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       id: json['id'] as int,
-      fullName: json['fullName'] as String,
+      // The docs say "fullName", but the real API (database column) sends
+      // "name". We accept both so the app works in any case.
+      fullName: (json['fullName'] ?? json['name']) as String,
       email: json['email'] as String,
     );
   }

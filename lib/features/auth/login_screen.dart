@@ -197,5 +197,9 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() => _isLoading = false);
 
     await showResponseDialog(context, success: success, message: message);
+
+    // Successful login (token already saved): enter the app
+    if (!success || !mounted) return;
+    context.go(AppRoutes.welcome);
   }
 }

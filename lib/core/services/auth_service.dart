@@ -15,6 +15,11 @@ class AuthException implements Exception {
   String toString() => message;
 }
 
+/// 401 Unauthorized: the token is missing, expired (1 hour) or wrong.
+class UnauthorizedException extends AuthException {
+  const UnauthorizedException(super.message);
+}
+
 /// Data returned by a successful login (200 OK).
 class LoginResponse {
   final String message;
@@ -87,18 +92,36 @@ class AuthService {
   /// false if it is not valid (401 Unauthorized: expired or wrong).
   /// Throws [AuthException] if the server can not be reached.
   static Future<bool> checkToken(String token) async {
-    final http.Response response;
+    final http.Response response = await _get(ApiConstants.checkToken, token);
+    return response.statusCode == 200;
+  }
+
+  /// GET /users/welcome (protected route, needs the token).
+  /// Returns the welcome message: "¡Bienvenido a la aplicación, <name>!".
+  /// Throws [UnauthorizedException] on 401 (session expired) and
+  /// [AuthException] on any other error (404 user not found, 500...).
+  static Future<String> welcome(String token) async {
+    final http.Response response = await _get(ApiConstants.welcome, token);
+    final Map<String, dynamic> json = _readJson(response);
+    final String message = json['message'] as String;
+
+    if (response.statusCode == 200) return message;
+    if (response.statusCode == 401) throw UnauthorizedException(message);
+    throw AuthException(message);
+  }
+
+  /// Common part of every protected GET: sends the JWT as a Bearer token.
+  static Future<http.Response> _get(String endpoint, String token) async {
     try {
-      response = await http
+      return await http
           .get(
-            Uri.parse(ApiConstants.baseUrl + ApiConstants.checkToken),
+            Uri.parse(ApiConstants.baseUrl + endpoint),
             headers: {'Authorization': 'Bearer $token'},
           )
           .timeout(ApiConstants.timeout);
     } catch (_) {
       throw const AuthException(AppStrings.connectionError);
     }
-    return response.statusCode == 200;
   }
 
   /// Common part of every POST: URL, JSON headers, body and timeout.
